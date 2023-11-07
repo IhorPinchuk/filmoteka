@@ -1,0 +1,206 @@
+body {
+  background-color: var(--body-bg-color);
+  transition: background-color var(--animation);
+
+  // animation-duration: 2s;
+  // animation-name: slidein-light;
+  // animation-iteration-count: 1;
+  // animation-direction: normal;
+}
+
+body.dark {
+  --second-text-color: #b92f2c;
+  --buttons-library-text-color: #b92f2c;
+
+  --btn-up-fill-color: #ffffff;
+  --btn-up-bg-color: #b92f2c;
+  --btn-up-hover-fill-color: #b92f2c;
+  --btn-up-hover-bg-color: rgba(196, 124, 124, 0.5);
+  --btn-up-border-color: #b92f2c;
+
+  --buttons-library-hover-bg-color: #b92f2c;
+  --body-bg-color: #c47c7cf5;
+
+  --buttons-modal-bg-color: #efecec;
+  --modal-accent-color: #b92f2c;
+
+  // ---------------modal-tem-------------
+  --bg-modal-team: #efecec;
+  --color-focus-team: #c47c7cf5;
+  --position-team: #b92f2c;
+  
+  --pagination-number-bg-color: #b92f2c;
+
+  --spinner-border-top-color: #b92f2c;
+  --spinner-2-border-top-color: #b92f2c;
+
+  --trailer-link-hover-bg-color: rgba(196, 124, 124, 0.8);
+  //footer
+  --modal-votes-bg-color: #c47c7cf5;
+  --footer-text-color: #000000;
+}
+
+.header {
+  background-color: var(--body-bg-color);
+  transition: background-color var(--animation);
+}
+
+// .header-container {
+//   animation-duration: 2s;
+//   animation-name: slidein-light;
+//   animation-iteration-count: 1;
+//   animation-direction: normal;
+// }
+
+// @keyframes slidein-light {
+//   from {
+//     margin-left: 100%;
+//     width: 300%;
+//   }
+
+//   to {
+//     margin-left: 0%;
+//     width: 100%;
+//   }
+// }
+
+.header-container-dark {
+  position: relative;
+  height: 460px;
+  width: 280px;
+
+  // animation-duration: 2s;
+  // animation-name: slidein-dark;
+  // animation-iteration-count: 1;
+  // animation-direction: normal;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 15px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background-image: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.4) 65.37%
+    ),
+    url(/src/images/header-dark/header-bg-mob-dark.jpg);
+
+  @include retina {
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.05),
+        rgba(0, 0, 0, 0.05)
+      ),
+      url(/src/images/header-dark/header-bg-mob-dark-2x.jpg);
+  }
+
+  @include tablet {
+    height: 222px;
+    width: 704px;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.05),
+        rgba(0, 0, 0, 0.05)
+      ),
+      url(/src/images/header-dark/header-tablet-dark.jpg);
+
+    @include retina {
+      background-image: linear-gradient(
+          0deg,
+          rgba(0, 0, 0, 0.05),
+          rgba(0, 0, 0, 0.05)
+        ),
+        url(/src/images/header-dark/header-tablet-dark-2x.jpg);
+    }
+  }
+
+  @include desktop {
+    height: 316px;
+    width: 1216px;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.05),
+        rgba(0, 0, 0, 0.05)
+      ),
+      url(/src/images/header-dark/header-desktop-dark.jpg);
+
+    @include retina {
+      background-image: linear-gradient(
+          0deg,
+          rgba(0, 0, 0, 0.05),
+          rgba(0, 0, 0, 0.05)
+        ),
+        url(/src/images/header-dark/header-desktop-dark-2x.jpg);
+    }
+  }
+}
+
+// @keyframes slidein-dark {
+//   from {
+//     margin-left: 100%;
+//     width: 300%;
+//   }
+
+//   to {
+//     margin-left: 0%;
+//     width: 100%;
+//   }
+// }
+
+.fixed-header-dark {
+  height: 100px;
+  width: 100%;
+  background-image: none;
+
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.05),
+      rgba(0, 0, 0, 0.05)
+    ),
+    url(/src/images/header-dark/header-tablet-dark.jpg);
+
+  @include retina {
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.05),
+        rgba(0, 0, 0, 0.05)
+      ),
+      url(/src/images/header-dark/header-tablet-dark-2x.jpg);
+  }
+
+  @include tablet {
+    height: 75px;
+  }
+
+  @include desktop {
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.05),
+        rgba(0, 0, 0, 0.05)
+      ),
+      url(/src/images/header-dark/header-desktop-dark.jpg);
+
+    @include retina {
+      background-image: linear-gradient(
+          0deg,
+          rgba(0, 0, 0, 0.05),
+          rgba(0, 0, 0, 0.05)
+        ),
+        url(/src/images/header-dark/header-desktop-dark-2x.jpg);
+    }
+  }
+}
+
+.trailer-button {
+  transition: background-color var(--animation);
+}
+
+.film-genres,
+.film-year {
+  transition: color var(--animation);
+}
+
+.footer-container {
+  transition: background-color var(--animation);
+}
